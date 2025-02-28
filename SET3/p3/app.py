@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request, send_from_directory, redirect, url_for
 
-app = Flask(name)
+app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
 
