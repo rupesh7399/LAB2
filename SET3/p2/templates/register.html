@@ -114,9 +114,9 @@
         {% with messages = get_flashed_messages() %} {% if messages %}
         <ul>
             {% for message in messages %}
-            <li class="{% if 'error' in message %}error{% elif 'success' in message %}success{% else 
-%}default{% endif 
-%}">
+            <li class="{% if 'error' in message %}
+                error{% elif 'success' in message %}
+                success{% else %}default{% endif%}">
                 {{ message }}
             </li>
             {% endfor %}

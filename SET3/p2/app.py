@@ -57,7 +57,7 @@ def login():
             return redirect(url_for('dashboard'))
         else:
             flash('Invalid username or password. Please try again.', 'error')
-            return render_template('login.html')
+    return render_template('login.html')
 
 
 @app.route('/dashboard')
