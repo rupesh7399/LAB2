@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask and AJAX Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Flask and AJAX Example</h1>
+    <button id="fetchDataBtn">Get Data from Flask</button>
+    <p id="result"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#fetchDataBtn').click(function() {
+                $.ajax({
+                    url: '/get_data',
+                    method: 'GET',
+                    success: function(response) {
+                        $('#result').text(response.message);  // Display the response message
+                    },
+                    error: function(error) {
+                        $('#result').text('Error fetching data');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
